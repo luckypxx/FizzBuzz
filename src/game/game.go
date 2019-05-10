@@ -11,9 +11,12 @@ const BUZZ = "Buzz"
 
 var print string
 
-func IsSpecialNumber(number int, specialNumber int, str string) bool {
-	print = str
-	return strings.Contains(strconv.Itoa(number), strconv.Itoa(specialNumber)) || (number%specialNumber) == 0
+func IsSpecialNumber(number int, specialNumber int, str string) string {
+
+	if strings.Contains(strconv.Itoa(number), strconv.Itoa(specialNumber)) || (number%specialNumber) == 0 {
+		return str
+	}
+	return ""
 }
 
 func IsFizzBuzz(number int, firstSprcialNumber int, secondSpecialNumber int) bool {
@@ -26,7 +29,10 @@ func IsFizzBuzz(number int, firstSprcialNumber int, secondSpecialNumber int) boo
 
 func IsFizzOrBuzz(number int, firstSpecialNumber int, secondSpecialNumber int) bool {
 
-	return IsSpecialNumber(number, firstSpecialNumber, FIZZ) || IsSpecialNumber(number, secondSpecialNumber, BUZZ)
+	print = ""
+	print += IsSpecialNumber(number,firstSpecialNumber,FIZZ)
+	print += IsSpecialNumber(number,secondSpecialNumber,BUZZ)
+	return print != ""
 }
 
 func CheckNumber(number int, firstSpecialNumber int, secondSpecialNumber int) {
