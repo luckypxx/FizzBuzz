@@ -20,6 +20,7 @@ func TestIsSpecialNumber_ContainSpecialNumber(t *testing.T) {
 	assert.Equal(t, true, IsSpecialNumber(number, specialNumber, FIZZ))
 	assert.Equal(t, print, FIZZ)
 }
+
 func TestIsSpecialNumber_BothFalse(t *testing.T) {
 	specialNumber := 5
 
